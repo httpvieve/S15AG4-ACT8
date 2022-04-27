@@ -49,8 +49,7 @@
 int
 isValidGrade(float value)
 {
-	//2ooo
-	//hello!
+	//test
 }
 
 /* getInputs
