@@ -182,7 +182,7 @@ countFail(float * aGrades, int n)
 int
 countPass(float * aGrades, int n)
 {
-   int counter = getInputs(aGrades) - countFail(aGrades, n);
+   return getInputs(aGrades) - countFail(aGrades, n);
    /*
    for (i = 0; i < n; i++)
    {
@@ -190,7 +190,7 @@ countPass(float * aGrades, int n)
          counter++;
    }
    return counter;
-        */
+    */
 }
 
 int
