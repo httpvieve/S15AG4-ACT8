@@ -182,13 +182,15 @@ countFail(float * aGrades, int n)
 int
 countPass(float * aGrades, int n)
 {
-   int i, counter = 0;
+   int counter = getInputs(aGrades) - countFail(aGrades, n);
+   /*
    for (i = 0; i < n; i++)
    {
       if (*(aGrades + i) > 0.0 && *(aGrades + i) < 4.0 && (int)(*(aGrades + i) * 10)% 5 == 0) 
          counter++;
    }
    return counter;
+        */
 }
 
 int
@@ -207,11 +209,11 @@ main()
    
    printf("Number of Failing: %d\n", countFail(aGrades, nElem));
    
-   res = countFail(aGrades, nElem);
+        res = countFail(aGrades, nElem);
    printf("Percentage of Failing: %.2f%%\n", (res/nElem)*100);
    
-   printf("Number of Passing: %d\n",countPass(aGrades, nElem) + count4(aGrades, nElem));
-	res = countPass(aGrades, nElem) + count4(aGrades, nElem);
+   printf("Number of Passing: %d\n",countPass(aGrades, nElem));
+	res = countPass(aGrades, nElem);
    printf("Percentage of Passing: %.2f%%\n", (res/nElem)*100);
 
    return 0;	  
