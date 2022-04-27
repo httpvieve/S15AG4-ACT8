@@ -4,7 +4,8 @@
       BALESTRAMON, Genevieve 
       DAYRIT, Jason Rafael
 
-   Section: 
+   Section:
+      S15A
 */
 
 /* Instruction:
@@ -91,6 +92,14 @@ getInputs(float aGrades[])
 void 
 displayAll(float aGrades[], int n)
 {
+	int i;
+	
+	for(i = 0; i < n; i++)
+	{
+		printf("%.1f ", aGrades[i]);
+	}
+	
+	printf("\n");
 }
 
 /* count4
@@ -110,6 +119,18 @@ displayAll(float aGrades[], int n)
 int
 count4(float aGrades[], int n)
 {
+	int i;
+	int count = 0;
+	
+	for(i = 0; i < n; i++)
+	{
+		if(aGrades[i] == 4.0)
+		{
+			count++;
+		}
+	}
+	
+	return count;
 }
 
 /* countFail
@@ -165,7 +186,7 @@ main()
    
    /* Provide the appropriate function calls 
       based on the given printf() below: */
-   printf("Number of 4.0: ");
+   printf("Number of 4.0: %d", count4(aGrades, 20));
    
    printf("Number of Failing: ");
    
