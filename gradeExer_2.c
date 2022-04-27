@@ -186,7 +186,7 @@ main()
    
    /* Provide the appropriate function calls 
       based on the given printf() below: */
-   printf("Number of 4.0: %d", count4(aGrades, 20));
+   printf("Number of 4.0: %d", count4(aGrades, MAX));
    
    printf("Number of Failing: ");
    
